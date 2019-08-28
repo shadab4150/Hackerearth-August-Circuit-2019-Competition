@@ -2,20 +2,12 @@
 https://www.hackerearth.com/challenges/competitive/august-circuits-19/algorithm/yet-another-gcd-sum-problem-4dc63a13/#c195677
 """
 # python 3
-import math
-def find_gcd(x, y): 
-    ans=math.gcd(x,y)
-    return ans
+from math import gcd
 
 def gcd_ar(arr):
-    
-    num1 = arr[0] 
-    num2 = arr[1] 
-    gcd = find_gcd(num1, num2) 
-  
-    for i in range(2, len(arr)): 
-        gcd = find_gcd(gcd, arr[i])
-    return gcd
+    x = reduce(gcd,arr)
+    return x
+
 
 n,m=[int(x) for x in input().split()]
 array=list(map(int,input().split()))

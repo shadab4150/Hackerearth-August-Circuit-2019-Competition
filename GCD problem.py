@@ -3,6 +3,7 @@ https://www.hackerearth.com/challenges/competitive/august-circuits-19/algorithm/
 """
 # python 3
 from math import gcd
+from functools import gcd
 
 def gcd_ar(arr):
     x = reduce(gcd,arr)
